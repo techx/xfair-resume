@@ -1,0 +1,6 @@
+extends base
+block content
+  a(href=record.s3_url)= record.s3_url
+  form(method='POST')
+    != form.toHTML()
+    input(type='submit', value="Make changes!")

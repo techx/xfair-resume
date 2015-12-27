@@ -1,0 +1,5 @@
+extends base
+block content
+  form(action='/upload', method='POST', enctype='multipart/form-data')
+    input(type='file', name='resume')
+    input(type='submit')
