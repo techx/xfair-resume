@@ -1,0 +1,6 @@
+db/
+.env
+*.log
+*.pid
+s3rver/
+node_modules/

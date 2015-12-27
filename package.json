@@ -1,0 +1,41 @@
+{
+  "name": "xfair-resume",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start-services": "npm run start-mongo && npm run start-s3",
+    "stop-services": "npm run stop-s3 && npm run stop-mongo",
+    "start-mongo": "mongod --dbpath db > mongo.log & echo $! > mongo.pid",
+    "start-s3": "node s3rver.js > s3rver.log & echo $! > s3.pid",
+    "stop-mongo": "kill -TERM $(cat mongo.pid) && rm mongo.pid",
+    "stop-s3": "kill -TERM $(cat s3.pid) && rm s3.pid",
+    "init": "cp .env.base .env && mkdir -p db && mkdir -p s3rver/default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techx/xfair-resume.git"
+  },
+  "keywords": [
+    "xFair",
+    "Resume",
+    "Portal"
+  ],
+  "author": "Jack Serrino (Detry322)",
+  "bugs": {
+    "url": "https://github.com/techx/xfair-resume/issues"
+  },
+  "homepage": "https://github.com/techx/xfair-resume#readme",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "forms": "^1.1.4",
+    "jade": "^1.11.0",
+    "mongoose": "^4.3.4",
+    "multer": "^1.1.0",
+    "multer-s3": "^1.4.1",
+    "s3rver": "0.0.12"
+  }
+}
