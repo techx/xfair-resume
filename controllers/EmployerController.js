@@ -6,7 +6,7 @@ module.exports = {
   },
   records: function(req, res) {
     Record.find({ filled_out: true }, function (err, records) {
-      result = []
+      result = [];
       for (var i = 0; i < records.length; i += 1) {
         result.push({
           name: records[i].name,
