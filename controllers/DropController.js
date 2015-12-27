@@ -9,12 +9,12 @@ module.exports = {
 
   create: function (req, res) {
     Record.create({
-      id: uuid.v4(),
+      uuid: uuid.v4(),
       resume: req.file.key
     }, function (err, new_record) {
       if (err)
         throw err;
-      res.redirect('/'+new_record.id);
+      res.redirect('/'+new_record.uuid);
     });
   },
 
@@ -60,7 +60,7 @@ module.exports = {
 
   findRecord: function (req, res, next) {
     var token = req.params.token;
-    Record.findOne({ id: token }, function (err, record) {
+    Record.findOne({ uuid: token }, function (err, record) {
       if (err)
         throw err;
       if (record === null) {

@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var form = require('../utils/form');
 
 var schema = new mongoose.Schema({
-  id: String,
+  uuid: String,
   resume: String,
   name: String,
   email: String,
@@ -11,7 +11,7 @@ var schema = new mongoose.Schema({
   degree: Number,
   mit_id: String,
   filled_out: {type: Boolean, default: false}
-}, { _id: false });
+});
 
 schema.virtual('form').get(function() {
   return form.bind(this);

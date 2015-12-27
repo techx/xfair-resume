@@ -8,11 +8,12 @@
     "start": "node app.js",
     "start-services": "npm run start-mongo && npm run start-s3",
     "stop-services": "npm run stop-s3 && npm run stop-mongo",
-    "start-mongo": "mongod --dbpath db > mongo.log & echo $! > mongo.pid",
+    "start-mongo": "mongod --pidfilepath mongo.pid --dbpath db > mongo.log &",
     "start-s3": "node s3rver.js > s3rver.log & echo $! > s3.pid",
     "stop-mongo": "kill -TERM $(cat mongo.pid) && rm mongo.pid",
     "stop-s3": "kill -TERM $(cat s3.pid) && rm s3.pid",
-    "init": "cp .env.base .env && mkdir -p db && mkdir -p s3rver/default"
+    "init": "cp .env.base .env && mkdir -p db && mkdir -p s3rver/default",
+    "reset": "rm -rf .env *.log *.pid s3rver db"
   },
   "repository": {
     "type": "git",

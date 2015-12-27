@@ -6,5 +6,7 @@ var client = new S3rver({
   directory: './s3rver/'
 });
 client.run(function(err, host, port) {
+  if (err)
+    throw err;
   console.log("Running s3rver on http://" + host + ":" + port);
 });
