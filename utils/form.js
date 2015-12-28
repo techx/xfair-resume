@@ -5,7 +5,45 @@ var widgets = forms.widgets;
 
 var gradYearChoices = ['- Select a graduation year', '2016', '2017', '2018', '2019', 'Graduate'];
 var degreeChoices = ['- Select a degree type', 'Bachelors', 'Masters', 'Doctorate'];
-var majorChoices = ['Course 2', 'Course 6-1', 'Course 6-2', 'Course 6-3'];
+var majorChoices = [
+  "Course 1 - Civil and Environmental Engineering",
+  "Course 2 - Mechanical Engineering",
+  "Course 3 - Materials Science and Engineering",
+  "Course 4 - Architecture",
+  "Course 5 - Chemistry",
+  "Course 6-1 - Electrical Engineering",
+  "Course 6-2 - Electrical Engineering and Computer Science",
+  "Course 6-3 - Computer Science",
+  "Course 6-7 - Computer Science and Molecular Biology",
+  "Course 7 - Biology",
+  "Course 8 - Physics",
+  "Course 9 - Brain and Cognitive Sciences",
+  "Course 10 - Chemical Engineering",
+  "Course 11 - Urban Studies and Planning",
+  "Course 12 - Earth, Atmospheric, and Planetary Sciences",
+  "Course 14 - Economics",
+  "Course 15 - Management",
+  "Course 16 - Aeronautics and Astronautics",
+  "Course 17 - Political Science",
+  "Course 18 - Mathematics",
+  "Course 18C - Mathematics with Computer Science",
+  "Course 20 - Biological Engineering",
+  "Course 21 - Humanities",
+  "Course 21A - Anthropology",
+  "Course 21F - Global Studies and Languages",
+  "Course 21H - History",
+  "Course 21L - Literature",
+  "Course 21M - Music and Theater Arts",
+  "Course 21W - Writing",
+  "Course 22 - Nuclear Science and Engineering",
+  "Course 24 - Linguistics and Philosophy",
+  "Course CMS - Comparative Media Studies",
+  "Course CSB - Computational and Systems Biology",
+  "Course ESD - Engineering Systems",
+  "Course HST - Health Sciences and Technology",
+  "Course MAS - Media Arts and Sciences",
+  "Course STS - Science, Technology, and Society"
+];
 
 var form = forms.create({
   name: fields.string({
