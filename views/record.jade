@@ -17,7 +17,7 @@ block content
         != form.toHTML()
         div.form-group
           label Resume
-          a.btn.btn-info.form-control(href=record.s3_url) Download resume
+          a.btn.btn-info.form-control(href=record.s3_url, target="_blank") Download resume
         button.btn.btn-default(type='submit')
           - if (record.filled_out)
             | Make changes!
