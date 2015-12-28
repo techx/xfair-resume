@@ -16,6 +16,7 @@ module.exports = multer({
       cb(null, filename);
     },
     endpoint: new AWS.Endpoint(process.env.AMAZON_S3_ENDPOINT),
+    contentType: s3.AUTO_CONTENT_TYPE,
     s3ForcePathStyle: true
   }),
   limits: {

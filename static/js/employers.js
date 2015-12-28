@@ -10,8 +10,8 @@ $(document).ready(function() {
         render: function(data, type, row, meta) {
           var a = $("<a>");
           a.text(data);
-          a.attr('download', data);
           a.attr('href', row['resume']);
+          a.attr('target','_blank');
           return a[0].outerHTML;
         }
       },
