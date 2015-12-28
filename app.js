@@ -21,8 +21,8 @@ app.use('/static', express.static('bower_components'));
 app.set('views', './views');
 app.set('view engine', 'jade');
 
-var dropController = require('./Controllers/DropController');
-var employerController = require('./Controllers/EmployerController');
+var dropController = require('./controllers/DropController');
+var employerController = require('./controllers/EmployerController');
 
 app.get('/employers', auth, employerController.search);
 app.get('/employers/records.json', auth, employerController.records);
