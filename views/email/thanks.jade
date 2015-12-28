@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title [xFair] Thanks for dropping your resume!
+  body
+    p Dear #{record.name},
+    p Thanks for dropping your resume! It will be forwarded to employers in your area of interest. If you want to edit your information in the future, please use the link below:
+    p
+      a(href=record.url) #{record.url}
+    p
+      | Best,
+      br
+      br
+      | the xFair team

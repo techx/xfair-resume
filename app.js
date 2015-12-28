@@ -17,6 +17,7 @@ var auth = basicAuth(process.env.EMPLOYER_USERNAME, process.env.EMPLOYER_PASSWOR
 var app = express();
 
 app.use('/static', express.static('static'));
+app.use('/static', express.static('bower_components'));
 app.set('views', './views');
 app.set('view engine', 'jade');
 

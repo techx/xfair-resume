@@ -13,7 +13,6 @@ module.exports = multer({
     region: process.env.AMAZON_REGION,
     filename: function (req, file, cb) {
       var filename = uuid.v4() + "." + mime.extension(file.mimetype);
-      console.log("Uploading new file: " + filename);
       cb(null, filename);
     },
     endpoint: new AWS.Endpoint(process.env.AMAZON_S3_ENDPOINT),

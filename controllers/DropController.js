@@ -1,6 +1,7 @@
 var uuid = require('node-uuid');
 var Record = require('../models/Record');
 var form = require('../utils/form');
+var sendEmail = require('../utils/email');
 
 module.exports = {
   index: function (req, res) {
@@ -42,7 +43,14 @@ module.exports = {
           if (err)
             throw err;
           if (first_time)
-            var blah = 1; // Send email
+            sendEmail({
+              email: record.email,
+              subject: '[xFair] Thanks for dropping your resume!',
+              template: 'email/thanks',
+              locals: {
+                record: record
+              }
+            });
           res.render('record', {
             record: record,
             form: record.form

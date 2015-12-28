@@ -1,0 +1,30 @@
+{
+  "name": "xfair-resume",
+  "version": "0.0.0",
+  "homepage": "https://github.com/techx/xfair-resume",
+  "authors": [
+    "Jack Serrino <Jserrino@gmail.com>"
+  ],
+  "description": "A simple webapp used to collect resumes from xFair attendees, as well as provide a searchable list to employers.",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "xfair",
+    "resume",
+    "portal"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dropzone": "~4.2.0",
+    "jquery": "~2.1.4",
+    "datatables": "~1.10.10"
+  }
+}

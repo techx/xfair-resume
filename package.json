@@ -33,6 +33,7 @@
     "aws-sdk": "^2.2.26",
     "basicauth-middleware": "^1.0.1",
     "dotenv": "^1.2.0",
+    "emailjs": "^1.0.1",
     "express": "^4.13.3",
     "forms": "^1.1.4",
     "jade": "^1.11.0",

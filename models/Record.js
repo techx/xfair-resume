@@ -37,4 +37,8 @@ schema.virtual('degree_name').get(function() {
   return form.degreeChoices[this.degree];
 });
 
+schema.virtual('url').get(function() {
+  return process.env.URL_BASE + '/' + this.uuid;
+});
+
 module.exports = mongoose.model('Record', schema);

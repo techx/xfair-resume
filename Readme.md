@@ -6,16 +6,17 @@ A simple webapp used to collect resumes from xFair attendees, as well as provide
 Setup
 -----
 
-Make sure you have `brew`, `npm`, `node`, and `mongodb` installed.
+Make sure you have `brew`, `npm`, `node`, `bower`, and `mongodb` installed.
 
-- [Go here for brew](http://brew.sh/)
-- Use `brew install node` to install `node` and `npm`
-- Use `brew install mongodb` to install Mongodb.
+- [Go here for brew.](http://brew.sh/)
+- Use `brew install node` to install `node` and `npm`.
+- Use `npm install -g bower` to install `bower`.
+- Use `brew install mongodb` to install `mongodb`.
 
 Running locally
 ---------------
 
-If it's your first time running the server, run `npm run init`.
+If it's your first time running the server, run `npm run init`, then `bower install`.
 
 Then, when you want to start the server, run `npm run start-services`
 
