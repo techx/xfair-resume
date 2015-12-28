@@ -8,8 +8,11 @@ $(document).ready(function() {
       {
         data: "name",
         render: function(data, type, row, meta) {
-          var escaped = $('<div>').text(data).html();
-          return '<a href="' + row['resume'] + '" target="_blank">' + escaped + "</a>";
+          var a = $("<a>");
+          a.text(data);
+          a.attr('download', data);
+          a.attr('href', row['resume']);
+          return a[0].outerHTML;
         }
       },
       {
