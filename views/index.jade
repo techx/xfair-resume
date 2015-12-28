@@ -1,5 +1,14 @@
 extends base
+
+block extra-headers
+  script(src='/static/dropzone/dist/min/dropzone.min.js')
+
+  link(rel='stylesheet', href='/static/css/index.css')
+  script(src='/static/js/index.js')
+
 block content
-  form(action='/upload', method='POST', enctype='multipart/form-data')
-    input(type='file', name='resume')
-    input(type='submit')
+  div.row
+    div.col-sm-8.col-sm-offset-2
+      h1 xFair
+      h2 Resume Drop
+      form(action="/upload", class="dropzone", id="resume-dropzone")

@@ -1,0 +1,12 @@
+body {
+  background-color: #05354e;
+  color: white;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.error_msg {
+  color: red;
+}

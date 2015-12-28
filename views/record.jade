@@ -1,6 +1,25 @@
 extends base
+block extra-headers
+  script(src='/static/js/record.js')
+  link(rel='stylesheet', href='/static/css/record.css')
+
+  script(src='/static/sweetalert/dist/sweetalert.min.js')
+  link(rel='stylesheet', href='/static/sweetalert/dist/sweetalert.css')
+
+  - if (success)
+    script window.show_alert = true
+
 block content
-  a(href=record.s3_url)= record.s3_url
-  form(method='POST')
-    != form.toHTML()
-    input(type='submit', value="Make changes!")
+  h1 xFair Resume Drop
+  div.row
+    div.col-sm-8.col-sm-offset-2
+      form(method='POST')
+        != form.toHTML()
+        div.form-group
+          label Resume
+          a.btn.btn-info.form-control(href=record.s3_url) Download resume
+        button.btn.btn-default(type='submit')
+          - if (record.filled_out)
+            | Make changes!
+          - else
+            | Submit info

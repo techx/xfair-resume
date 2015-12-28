@@ -53,7 +53,8 @@ module.exports = {
             });
           res.render('record', {
             record: record,
-            form: record.form
+            form: record.form,
+            success: true
           });
         });
       },

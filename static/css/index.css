@@ -1,0 +1,24 @@
+.dz-preview {
+  display: none;
+}
+
+body {
+  background-color: #05354e;
+  color: white;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+form {
+  margin-top: 3em;
+  color: gray;
+  border: 2px dashed gray;
+  height: 10em;
+  text-align: center;
+  padding: 4em;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
