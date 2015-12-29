@@ -8,6 +8,7 @@ var degreeChoices = ['- Select a degree type', 'Bachelors', 'Masters', 'Doctorat
 var majorChoices = [
   "Course 1 - Civil and Environmental Engineering",
   "Course 2 - Mechanical Engineering",
+  "Course 2OE - Ocean Engineering",
   "Course 3 - Materials Science and Engineering",
   "Course 4 - Architecture",
   "Course 5 - Chemistry",
