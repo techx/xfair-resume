@@ -26,9 +26,9 @@ for (var i = 0; i < NUM_USERS; i++) {
     resume: "resumes/" + uuid.v4() + ".pdf",
     name: "Person " + i,
     email: "person" + i + "@mit.edu",
-    year: Math.floor(Math.random()*5) + 1,
-    major: [Math.floor(Math.random()*4)],
-    degree: Math.floor(Math.random()*3) + 1,
+    year: Math.floor(Math.random()*(form.gradYearChoices.length - 1)) + 1,
+    major: [Math.floor(Math.random()*form.majorChoices.length)],
+    degree: Math.floor(Math.random()*(form.degreeChoices.length - 1)) + 1,
     mit_id: Math.floor(Math.random()*900000000 + 100000000) + "",
     filled_out: true
   }, processUser);
