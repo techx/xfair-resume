@@ -5,10 +5,18 @@
 body {
   background-color: #05354e;
   color: white;
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+  margin-top: 20%;
+  margin-bottom: 5%;
 }
 
 h1, h2, h3 {
   text-align: center;
+  font-weight: 300;
 }
 
 form {
