@@ -1,9 +1,20 @@
 body {
   background-color: #05354e;
   color: white;
+  font-weight: 300;
+}
+
+h1 {
+  margin-top: 5%;
+  letter-spacing: .15em;
+}
+
+label {
+  font-weight: 300;
 }
 
 h1, h2, h3 {
+  font-weight: 300;
   text-align: center;
 }
 
