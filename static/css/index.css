@@ -27,6 +27,7 @@ form {
   margin-top: 3em;
   color: gray;
   border: 2px dashed gray;
+  cursor: pointer;
   height: 10em;
   text-align: center;
   padding: 4em;
