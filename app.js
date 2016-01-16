@@ -27,9 +27,11 @@ var employerController = require('./controllers/EmployerController');
 app.get('/employers', auth, employerController.search);
 app.get('/employers/records.json', auth, employerController.records);
 app.get('/', dropController.index);
-app.post('/upload', upload.single('resume'), dropController.create);
+app.post('/update', upload.single('resume'), dropController.create);
 app.get('/:token', dropController.findRecord, dropController.view);
 app.post('/:token', dropController.findRecord, dropController.update);
+app.get('/:token/update', dropController.redrop_view);
+app.post('/:token/update', upload.single('resume'), dropController.findRecord, dropController.redrop);
 
 app.listen(process.env.PORT);
 console.log("App listening on port " + process.env.PORT);

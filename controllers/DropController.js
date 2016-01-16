@@ -19,6 +19,19 @@ module.exports = {
     });
   },
 
+  redrop_view: function (req, res) {
+    res.render('index', { redrop: true });
+  },
+
+  redrop: function (req, res) {
+    req.record.resume = req.file.key;
+    req.record.save(function(err) {
+      if (err)
+        throw err;
+      res.redirect('/'+req.record.uuid);
+    });
+  },
+
   view: function (req, res) {
     var record = req.record;
     res.render('record', {
