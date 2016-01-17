@@ -15,7 +15,7 @@ module.exports = {
     }, function (err, new_record) {
       if (err)
         throw err;
-      res.redirect('/'+new_record.uuid);
+      res.send('/'+new_record.uuid);
     });
   },
 
@@ -28,7 +28,7 @@ module.exports = {
     req.record.save(function(err) {
       if (err)
         throw err;
-      res.redirect('/'+req.record.uuid);
+      res.send('/'+req.record.uuid);
     });
   },
 

@@ -9,7 +9,7 @@ $(document).ready(function() {
                                                     // No it's not worth the time policing you.
     complete: function(file) {
       if (file.xhr) {
-        window.location = file.xhr.responseURL;
+        window.location = file.xhr.responseText;
       }
     },
     sending: function() {
