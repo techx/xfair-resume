@@ -15,15 +15,13 @@ block content
     div.col-sm-8.col-sm-offset-2
       form(method='POST')
         != form.toHTML()
+        div.row#links
+          div.col-sm-12
+            a(href=record.s3_url, target="_blank") View your resume
+            a(href="/" + record.uuid + "/update", target="_blank") Update your resume
         div.form-group
-          label Resume
-          div.row
-            div.col-sm-6
-              a.btn.btn-info.form-control(href=record.s3_url, target="_blank") Download resume
-            div.col-sm-6
-              a.btn.btn-success.form-control(href="/" + record.uuid + "/update", target="_blank") Update resume
-        button.btn.btn-default(type='submit')
-          - if (record.filled_out)
-            | Make changes!
-          - else
-            | Submit info
+          button.btn.btn-info.col-sm-12(type='submit')
+            - if (record.filled_out)
+              | Make changes!
+            - else
+              | Submit info
