@@ -2,9 +2,9 @@ source .env;
 
 mkdir -p resumes
 
-cd resumes
-
 node utils/export.js | while read -r line ; do
+
+  cd resumes
 
   major=$(echo $line | cut -d',' -f1)
   url=$(echo $line | cut -d',' -f2)
@@ -17,9 +17,9 @@ node utils/export.js | while read -r line ; do
 
   cd ..
 
-done
+  cd ..
 
-cd ..
+done
 
 zip -r resumes.zip resumes
 
