@@ -1,9 +1,5 @@
 require('dotenv').load();
 
-if (process.env.AMAZON_S3_ENDPOINT == 'amazon') {
-  process.env.AMAZON_S3_ENDPOINT = 'https://s3.amazonaws.com';
-}
-
 var express = require('express');
 var mongoose = require('mongoose');
 var upload = require('./utils/upload');
