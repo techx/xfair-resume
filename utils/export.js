@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGO_ENDPOINT);
 var Record = require('../models/Record');
 
 function recordToFilename(record) {
-  var unsanitizedName = record.year_name + '_' + record.name + '_' + (record.uuid.substr(0,3)) + '.' + (record.resume.split('.').pop());
+  var unsanitizedName = record.year_name + '_' + record.name + '_' + (record.uuid.substr(0,4)) + '.' + (record.resume.split('.').pop());
   return unsanitizedName.replace(/[^a-zA-Z0-9]/g,'_');
 }
 
