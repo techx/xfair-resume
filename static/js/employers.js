@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $("#search").DataTable({
+
+  var datatable = $("#search").DataTable({
     ajax: {
       url: "/employers/records.json",
       dataSrc: ""
@@ -32,5 +33,33 @@ $(document).ready(function() {
       }
     ],
     pageLength: 25
+  });
+
+  window.d = datatable;
+
+  var createCSV = function(rows) {
+    var result = ['email,name'];
+    for (var i = 0; i < rows.length; i += 1) {
+      var row = rows[i];
+      var line = row['email'] + "," + row['name'];
+      result.push(line);
+    }
+    var joined = result.join('\n');
+    return new Blob([joined], {type: "text/csv"});
+  }
+
+  var downloadFile = function(blob, filename) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
+
+  $("#export").on('click', function() {
+    var rows = datatable.rows({filter:'applied'}).data();
+    if (rows.length > 0) {
+      var csv = createCSV(rows);
+      downloadFile(csv, 'export.csv');
+    }
   });
 });
