@@ -1,7 +1,6 @@
 var multer = require('multer');
 var s3 = require('multer-s3');
 var uuid = require('node-uuid');
-var mime = require('mime');
 var AWS = require('aws-sdk');
 
 module.exports = multer({
@@ -12,7 +11,7 @@ module.exports = multer({
     accessKeyId: process.env.AMAZON_ACCESS_KEY,
     region: process.env.AMAZON_REGION,
     filename: function (req, file, cb) {
-      var filename = uuid.v4() + "." + mime.extension(file.mimetype);
+      var filename = uuid.v4() + ".pdf";
       cb(null, filename);
     },
     endpoint: new AWS.Endpoint(process.env.AMAZON_S3_ENDPOINT),

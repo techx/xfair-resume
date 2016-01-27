@@ -8,7 +8,7 @@ var Record = require('../models/Record');
 
 function recordToFilename(record) {
   var unsanitizedName = record.year_name + '_' + record.name + '_' + (record.uuid.substr(0,4));
-  return unsanitizedName.replace(/[^a-zA-Z0-9]/g,'_') + '.' + (record.resume.split('.').pop());
+  return unsanitizedName.replace(/[^a-zA-Z0-9]/g,'_') + '.pdf';
 }
 
 Record.find({ filled_out: true }).exec(function(err, records) {

@@ -40,6 +40,11 @@ Then, it generates a unique link through which students can edit their info. We 
 
 Only #6 is not viewable/searchable by employers. Employers can login to the server by visiting `/employers`, using the username and password specified in the environemnt variables(+).
 
+Resume Export
+-------------
+
+Run `export-resumes.sh` to export all of the resumes in the system to a resumes.zip file. Leave this script running! Takes about 10 minutes on a fast connection.
+
 Notes
 -----
 
