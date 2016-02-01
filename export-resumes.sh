@@ -2,7 +2,7 @@ source .env;
 
 mkdir -p resumes
 
-node utils/export.js | while read -r line ; do
+node utils/export-resumes.js | while read -r line ; do
 
   cd resumes
 

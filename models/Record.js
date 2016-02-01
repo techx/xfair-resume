@@ -11,7 +11,7 @@ var schema = new mongoose.Schema({
   degree: Number,
   mit_id: String,
   filled_out: {type: Boolean, default: false}
-});
+}, { timestamps: true });
 
 schema.virtual('form').get(function() {
   return form.bind(this);
