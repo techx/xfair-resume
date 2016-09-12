@@ -12,11 +12,6 @@ block extra-headers
 block content
   div.row
     div.col-sm-8.col-sm-offset-2
-      a(href="http://xfair.io")
+      a(href="http://hackmit.org")
         img(class="logo" src="/static/img/logo.svg"
                onerror="this.onerror=null; this.src='/static/img/logo.png'")
-      - if (redrop)
-        h2 Drop your updated resume below
-      - else
-        h2 RESUME DROP
-      form(action="update", class="dropzone", id="resume-dropzone")

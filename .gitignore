@@ -1,8 +1,11 @@
 db/
 .env
+.resumes.progress
 *.log
 *.pid
 s3rver/
 node_modules/
 bower_components/
 resumes/
+duplicates/
+scripts/data

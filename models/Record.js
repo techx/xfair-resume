@@ -7,7 +7,7 @@ var schema = new mongoose.Schema({
   name: String,
   email: String,
   year: Number,
-  major: [Number],
+  major: [String],
   degree: Number,
   mit_id: String,
   filled_out: {type: Boolean, default: false}
@@ -28,7 +28,7 @@ schema.virtual('year_name').get(function() {
 schema.virtual('major_name').get(function() {
   var result = [];
   for (var i = 0; i < this.major.length; i += 1) {
-    result.push(form.majorChoices[this.major[i]]);
+    result.push(this.major[i]);
   }
   return result;
 });
