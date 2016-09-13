@@ -74,11 +74,8 @@ var form = forms.create({
     errorAfterField: true,
     cssClasses: { field: [ 'form-group' ] }
   }),
-  major: fields.array({
+  major: fields.string({
     required: true,
-    widget: widgets.multipleSelect({ classes: ['form-control'] }),
-    choices: majorChoices,
-    errorAfterField: true,
     cssClasses: { field: [ 'form-group' ] }
   }),
   degree: fields.number({
