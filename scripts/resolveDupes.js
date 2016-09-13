@@ -5,14 +5,12 @@
 // dependencies
 require('dotenv').config();
 var fs = require('fs');
-var uuid = require('node-uuid');
 var mongoose = require('mongoose');
 var Record = require('../models/Record');
 var users = require('./data/users.json');
 
 // config
 var NAME_DIVIDER = ' -';
-var PROGRESS_FILE = '.resumes.progress';
 
 // work functions
 function formatUsersJson(json) {
@@ -31,7 +29,7 @@ function moveDuplicates(usersInfo) {
   }
 
   var resumes = process.argv[2];
-  var duplicates = process.argv[2];
+  var duplicates = process.argv[3];
   fs.readdir(resumes, function(err, files) {
     if (err) return console.log(err); 
 
@@ -43,27 +41,60 @@ function moveDuplicates(usersInfo) {
       var fileName = files[i];
       var fullName = getFullName(usersInfo, fileName);
       if (fullName !== -1 && fullName !== -2) {
-        dupeDict[fullName] = dupeDict[fileName] || [];
+        if (!(fullName in dupeDict)) {
+          dupeDict[fullName] = [];
+        }
         dupeDict[fullName].push(fileName);
       } else {
         console.log('ERR: Bad file name: ' + fileName);
       }
     }
 
+    var numRemaining = 0;
     for (var name in dupeDict) {
       if (
-        dupeDict[name].length > 1 ||
         usersInfo[name].length > 1
       ) {
         console.log('moving resume and record for ' + name);
         for (var j = 0; j < dupeDict[name].length; j++) {
-          fs.rename(resumes + '/' + fileName, duplicates + '/' + fileName);
+          var dupeName = dupeDict[name][j];
+          var from = resumes + '/' + dupeName;
+          var to = duplicates + '/' + dupeName;
+          fs.rename(from, to);
         }
-        // Record.remove({name: name});
+        Record.remove(
+          {name: name},
+          (function(nameToRemove) {
+            return function(err, res) {
+              if (err) return console.log(err);
+
+              console.log('REMOVED ' + nameToRemove);
+            };
+          })(name)
+        );
+      } else if (dupeDict[name].length > 1) {
+        Record.find({
+          name: name
+        }, function(err, records) {
+          for (var k = 0; k < records.length - 1; k++) {
+            numRemaining += 1; 
+
+            Record.remove({
+              'uuid': records[k].uuid
+            }, function(err, res) {
+              if (err) return console.log(err)
+
+              numRemaining -= 1;
+
+              console.log('Removed record: ' + records[k].name); 
+              if (numRemaining === 0) {
+                mongoose.connection.close();
+              }
+            });
+          }
+        });
       }
     }
-
-    mongoose.connection.close();
   });
 }
 
