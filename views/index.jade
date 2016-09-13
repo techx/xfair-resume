@@ -15,3 +15,9 @@ block content
       a(href="http://hackmit.org")
         img(class="logo" src="/static/img/logo.svg"
                onerror="this.onerror=null; this.src='/static/img/logo.png'")
+      - if (redrop)
+        h2 Drop your updated resume below
+      - else
+        h2 HACKMIT 2016
+      form(action="update", class="dropzone", id="resume-dropzone")
+
