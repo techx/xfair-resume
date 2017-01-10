@@ -1,7 +1,9 @@
 body {
-  background-color: #05354e;
+  background: linear-gradient(to bottom, #547A82 0%, #3EACA8 33%, #A2D4AB 100%);
+  background-attachment: fixed;
   color: white;
   font-weight: 300;
+  padding-bottom: 2em;
 }
 
 h1 {
@@ -30,4 +32,18 @@ h1, h2, h3 {
 
 #links a {
   margin: 0 1em;
+  color: white;
+  font-weight: bold;
+}
+
+.btn.btn-info {
+  background-color: #547A82;
+  border-color: #547A82;
+  outline: none;
+}
+
+.btn.btn-info:active {
+  background-color: #3EACA8;
+  border-color: #3EACA8;
+  outline: none;
 }
