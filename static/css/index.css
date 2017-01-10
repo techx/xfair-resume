@@ -3,9 +3,11 @@
 }
 
 body {
-  background-color: #05354e;
+  background: linear-gradient(to bottom, #547A82 0%, #3EACA8 33%, #A2D4AB 100%);
+  background-attachment: fixed;
   color: white;
   text-align: center;
+  min-height: 100%;
 }
 
 .logo {
@@ -25,7 +27,7 @@ h1, h2, h3 {
 
 form {
   margin-top: 3em;
-  color: gray;
+  color: white;
   border: 2px dashed gray;
   cursor: pointer;
   height: 10em;
