@@ -3,7 +3,7 @@ var fields = forms.fields;
 var validators = forms.validators;
 var widgets = forms.widgets;
 
-var gradYearChoices = ['- Select a graduation year', '2018', '2019', '2020', '2021', 'Graduate'];
+var gradYearChoices = ['- Select a graduation year', '2019', '2020', '2021', '2022', 'Graduate'];
 var degreeChoices = ['- Select a degree type', 'Bachelors', 'Masters', 'Doctorate'];
 var majorChoices = [
   "Course 1 - Civil and Environmental Engineering",
@@ -32,7 +32,7 @@ var majorChoices = [
   "Course 20 - Biological Engineering",
   "Course 21 - Humanities",
   "Course 21A - Anthropology",
-  "Course 21F - Global Studies and Languages",
+  "Course 21G - Global Studies and Languages",
   "Course 21H - History",
   "Course 21L - Literature",
   "Course 21M - Music and Theater Arts",

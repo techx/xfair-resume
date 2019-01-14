@@ -1,7 +1,7 @@
 body {
-  background: #284b63;
+  background: #fffbe9;
   background-attachment: fixed;
-  color: white;
+  color: #40B682;
   font-weight: 300;
   padding-bottom: 2em;
 }
@@ -32,13 +32,13 @@ h1, h2, h3 {
 
 #links a {
   margin: 0 1em;
-  color: white;
+  color: #AFD34E;
   font-weight: bold;
 }
 
 .btn.btn-info {
-  background-color: #3c6e71;
-  border-color: #3c6e71;
+  background-color: #F05624;
+  border-color: #F05624;
   outline: none;
 }
 

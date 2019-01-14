@@ -3,9 +3,9 @@
 }
 
 body {
-  background: #284b63;
+  background: #fffbe9;
   background-attachment: fixed;
-  color: white;
+  color:#40B682;
   text-align: center;
   min-height: 100%;
 }
@@ -27,7 +27,7 @@ h1, h2, h3 {
 
 form {
   margin-top: 3em;
-  color: white;
+  color: #40B682;
   border: 2px dashed gray;
   cursor: pointer;
   height: 10em;
@@ -35,5 +35,6 @@ form {
   padding: 4em;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
 }
 
