@@ -1,6 +1,41 @@
-@font-face {
-  font-family: Avenir;
-  src: url("../assets/Avenir.ttc"); }
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap");
+
 body {
-  font-family: "Avenir", "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  background: linear-gradient(#40a6ab, #8cc4c8 10%, #fff);
+  background-attachment: fixed;
+  color: #40a6ab;
+  min-height: 100%;
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 90%;
+  max-width: 400px;
+  margin: 10vh auto 0;
+  display: block;
+}
+
+.line-plane {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  width: 95%;
+  margin-top: -15vh;
+}
+
+@media (max-width: 50rem) {
+  .line-plane {
+    display: none;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  margin-bottom: 10rem;
 }

@@ -2,32 +2,8 @@
   display: none;
 }
 
-body {
-  background: #fffbe9;
-  background-attachment: fixed;
-  color:#40B682;
-  text-align: center;
-  min-height: 100%;
-}
-
-.logo {
-  width: 400px;
-  margin-top: 20%;
-  margin-bottom: 5%;
-}
-
-h2 {
-  letter-spacing: .15em;
-}
-
-h1, h2, h3 {
-  text-align: center;
-  font-weight: 300;
-}
-
 form {
   margin-top: 3em;
-  color: #40B682;
   border: 2px dashed gray;
   cursor: pointer;
   height: 10em;
@@ -38,3 +14,6 @@ form {
   font-size: 1.2em;
 }
 
+.dz-message {
+  color: #fff;
+}

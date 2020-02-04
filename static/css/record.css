@@ -1,23 +1,6 @@
-body {
-  background: #fffbe9;
-  background-attachment: fixed;
-  color: #40B682;
-  font-weight: 300;
-  padding-bottom: 2em;
-}
-
-h1 {
-  margin-top: 5%;
-  letter-spacing: .15em;
-}
-
 label {
-  font-weight: 300;
-}
-
-h1, h2, h3 {
-  font-weight: 300;
-  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .error_msg {
@@ -32,18 +15,37 @@ h1, h2, h3 {
 
 #links a {
   margin: 0 1em;
-  color: #AFD34E;
   font-weight: bold;
+  color: #40a6ab;
 }
 
 .btn.btn-info {
-  background-color: #F05624;
-  border-color: #F05624;
+  background-color: #e55ebf;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  border: none;
   outline: none;
+  transition: 0.2s;
+  margin: auto;
+  letter-spacing: 0.5px;
 }
 
-.btn.btn-info:active {
-  background-color: #c4d7f2;
-  border-color: #c4d7f2;
-  outline: none;
+.btn.btn-info:active,
+.btn.btn-info:hover {
+  background-color: #e148b6;
+}
+
+.form-control {
+  padding: 5px 10px 5px 7.5px;
+}
+
+option {
+  padding: 0.5rem 0.7rem;
+}
+
+.btn-container {
+  text-align: center;
 }

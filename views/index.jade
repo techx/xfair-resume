@@ -3,20 +3,21 @@ extends base
 block extra-headers
   script(src='/static/dropzone/dist/min/dropzone.min.js')
 
-  link(rel='stylesheet', href='/static/css/index.css')
+  link(rel='stylesheet' href='/static/css/index.css')
   script(src='/static/js/index.js')
 
   script(src='/static/sweetalert/dist/sweetalert.min.js')
-  link(rel='stylesheet', href='/static/sweetalert/dist/sweetalert.css')
+  link(rel='stylesheet' href='/static/sweetalert/dist/sweetalert.css')
 
 block content
   div.row
     div.col-sm-8.col-sm-offset-2
       a(href="http://xfair.io")
         img(class="logo" src="/static/img/logo.svg"
-               onerror="this.onerror=null; this.src='/static/img/logo.png'")
+          onerror="this.onerror=null; this.src='/static/img/logo.png'")
       - if (redrop)
-        h2 Drop your updated resume below
+        h2 Update Resume
       - else
         h2 Resume Drop
-      form(action="update", class="dropzone", id="resume-dropzone")
+      img(class="line-plane" src="/static/img/dash_line_and_plane.svg")
+      form(action="update" class="dropzone" id="resume-dropzone")
