@@ -2,9 +2,9 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  background: linear-gradient(#40a6ab, #8cc4c8 10%, #fff);
+  background: linear-gradient(#4387b6, #74c0f7 10%, #fff);
   background-attachment: fixed;
-  color: #40a6ab;
+  color: #4387b6;
   min-height: 100%;
   font-size: 1.5rem;
 }

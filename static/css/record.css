@@ -20,7 +20,7 @@ label {
 }
 
 .btn.btn-info {
-  background-color: #e55ebf;
+  background-color: #f45b69;
   display: inline-block;
   text-transform: uppercase;
   padding: 0.9rem 2rem;
@@ -35,7 +35,7 @@ label {
 
 .btn.btn-info:active,
 .btn.btn-info:hover {
-  background-color: #e148b6;
+  background-color: #f45b69;
 }
 
 .form-control {
