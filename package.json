@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/techx/xfair-resume#readme",
   "dependencies": {
-    "aws-sdk": "^2.2.26",
+    "aws-sdk": "^2.814.0",
     "basicauth-middleware": "^1.0.1",
     "dotenv": "^1.2.0",
     "emailjs": "^1.0.1",
