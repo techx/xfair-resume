@@ -1,8 +1,25 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+
+:root {
+  --link: #412b60;
+  --link-background: #6d59ab3f;
+  --link-invert: #fbfefd;
+  --link-invert-background: #fbfefd3f;
+
+  --primary: #5632c1;
+  --primary-light: #6a4ebf;
+  --secondary: #758ecd;
+  --secondary-dark: #344d8e;
+
+  --grad-top: #5e80cd;
+  --grad-bot: #aac9f6;
+  --grad-third: #bac6e9;
+  --gray-box: #9999993f;
+}
 
 body {
-  font-family: "Azo Sans", sans-serif;
-  background: linear-gradient(#4387b6, #74c0f7 10%, #fff);
+  font-family: "Work Sans", sans-serif;
+  background: linear-gradient(var(--grad-top), var(--grad-bot) 70%);
   background-attachment: fixed;
   color: #4387b6;
   min-height: 100%;
@@ -32,7 +49,7 @@ body {
 
 h2 {
   text-align: center;
-  font-weight: 500;
+  /* font-weight: 500; */
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;

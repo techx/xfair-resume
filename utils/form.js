@@ -3,7 +3,7 @@ var fields = forms.fields;
 var validators = forms.validators;
 var widgets = forms.widgets;
 
-var gradYearChoices = ['- Select a graduation year', '2022', '2023', '2024', '2025', 'Graduate'];
+var gradYearChoices = ['- Select a graduation year', '2023', '2024', '2025', '2026', 'Graduate'];
 var degreeChoices = ['- Select a degree type', 'Bachelors', 'Masters', 'Doctorate'];
 var majorChoices = [
   "Course 1 - Civil and Environmental Engineering",
@@ -17,6 +17,7 @@ var majorChoices = [
   "Course 6-1 - Electrical Science and Engineering",
   "Course 6-2 - Electrical Engineering and Computer Science",
   "Course 6-3 - Computer Science and Engineering",
+  "Course 6-4 - Artificial Intelligence and Decision Making",
   "Course 6-7 - Computer Science and Molecular Biology",
   "Course 6-9 - Computation and Cognition",
   "Course 6-14 - Computer Science, Economics, and Data Science",

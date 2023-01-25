@@ -3,7 +3,7 @@ $(document).ready(function() {
     paramName: "resume",
     maxFilesize: 8,
     parallelUploads: 1,
-    dictDefaultMessage: "Drag your resume here or click to select a file. (8 MB Max, PDF only!)",
+    dictDefaultMessage: "Drag your resume here or click to select a file. (8 MB max, PDF only!)",
     createImageThumbnails: false,
     acceptedFiles: ".pdf,application/pdf", // Yes you can upload arbitrary files
                                                     // No it's not worth the time policing you.
