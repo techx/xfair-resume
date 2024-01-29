@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
 
 :root {
-  --link: #412b60;
-  --link-background: #6d59ab3f;
-  --link-invert: #fbfefd;
-  --link-invert-background: #fbfefd3f;
+  --link: #1b512d;
+  --link-background: #73e2a7;
+  --link-invert: #c4e89e;
+  --link-invert-background: #DEF4C63f;
 
-  --primary: #5632c1;
-  --primary-light: #6a4ebf;
-  --secondary: #758ecd;
-  --secondary-dark: #344d8e;
+  --primary: #1c7c54;
+  --primary-light: #1c7c54;
+  --secondary: #1c7c54;
+  --secondary-dark: #1B512D;
 
-  --grad-top: #5e80cd;
-  --grad-bot: #aac9f6;
-  --grad-third: #bac6e9;
+  --grad-top: #cef1a8;
+  --grad-third: #bbe390;
+  --grad-bot: rgb(168, 236, 115);
   --gray-box: #9999993f;
 }
 
