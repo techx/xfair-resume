@@ -38,10 +38,10 @@ $(document).ready(function() {
   window.d = datatable;
 
   var createCSV = function(rows) {
-    var result = ['email,name'];
+    var result = ['email,name,major(s),year,degree'];
     for (var i = 0; i < rows.length; i += 1) {
       var row = rows[i];
-      var line = row['email'] + "," + row['name'];
+      var line = row['email'] + "," + row['name'] + "," + row["major"] + "," + row["year"] + "," + row["degree"];
       result.push(line);
     }
     var joined = result.join('\n');

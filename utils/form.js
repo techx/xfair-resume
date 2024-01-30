@@ -97,7 +97,7 @@ var form = forms.create({
   }),
   degree: fields.number({
     required: true,
-    label: 'Degree Type',
+    label: 'Degree Type (Hold Ctrl to select multiple)',
     widget: widgets.select({ classes: ['form-control'] }),
     choices: degreeChoices,
     validators: [
