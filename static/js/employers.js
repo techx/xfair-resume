@@ -41,7 +41,15 @@ $(document).ready(function() {
     var result = ['email,name,major(s),year,degree'];
     for (var i = 0; i < rows.length; i += 1) {
       var row = rows[i];
-      var line = row['email'] + "," + row['name'] + "," + row["major"] + "," + row["year"] + "," + row["degree"];
+      var majorList = String(row["major"]).split(",");
+      var major = "";
+      for (var j = 0; j < majorList.length; j+= 1) {
+        major += majorList[j].slice(7, majorList[j].indexOf(" ", 7));
+        if (j != majorList.length-1) {
+          major += ",";
+        }
+      }
+      var line = row['email'] + "," + row['name'] + ",\""+ major + "\"," + row["year"] + "," + row["degree"];
       result.push(line);
     }
     var joined = result.join('\n');
